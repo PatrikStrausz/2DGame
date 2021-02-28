@@ -35,12 +35,15 @@ public class Player : MonoBehaviour
 
     public ParticleSystem footsteps;
     private ParticleSystem.EmissionModule footEmission;
+    public ParticleSystem fallDust;
 
     private bool wasOnGround;
 
     Vector3 lastVelocity;
 
     public int jumpCounter;
+
+
 
    
 
@@ -125,6 +128,8 @@ public class Player : MonoBehaviour
 
                 jumpCounter += 1;
                 JumpsCounter.jumpValue = jumpCounter;
+
+                
                 CreateJumpDust();
             }
            
@@ -164,8 +169,12 @@ public class Player : MonoBehaviour
         //show impact effect
         if(!wasOnGround && isGrounded)
         {
-            jumpDust.Stop();
-            jumpDust.Play();
+          
+
+            CameraShake.Instance.ShakeCamera(1f,0.1f);
+
+            fallDust.Stop();
+            fallDust.Play();
         }
         wasOnGround = isGrounded;
 
@@ -193,7 +202,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.CompareTag("Wall"))
         {
          
         
@@ -205,7 +214,9 @@ public class Player : MonoBehaviour
                 speed = 16f;
             }
             rb.velocity = s * Mathf.Max(speed, 0f);
-           
+
+
+            CameraShake.Instance.ShakeCamera(3f, 0.1f);
         }
     }
 
