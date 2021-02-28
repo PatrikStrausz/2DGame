@@ -8,10 +8,7 @@ public class RoomManager : MonoBehaviour
 
     public GameObject virtualCam;
 
-    private void Awake()
-    {
-      
-    }
+   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,7 +16,8 @@ public class RoomManager : MonoBehaviour
         {
             virtualCam.SetActive(true);
 
-         
+            CameraShake.Instance = virtualCam.GetComponent<CameraShake>();
+       
         }
     }
 
