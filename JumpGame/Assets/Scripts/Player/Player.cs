@@ -171,7 +171,7 @@ public class Player : MonoBehaviour
         {
           
 
-            CameraShake.Instance.ShakeCamera(1f,0.1f);
+            CameraShake.Instance.ShakeCamera(1f,0.05f);
 
             fallDust.Stop();
             fallDust.Play();
@@ -215,8 +215,9 @@ public class Player : MonoBehaviour
             }
             rb.velocity = s * Mathf.Max(speed, 0f);
 
+            fallDust.Play();
 
-            CameraShake.Instance.ShakeCamera(3f, 0.1f);
+            CameraShake.Instance.ShakeCamera(2f, 0.05f);
         }
     }
 

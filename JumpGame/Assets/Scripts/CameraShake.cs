@@ -52,6 +52,7 @@ public class CameraShake : MonoBehaviour
                     CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
                       cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
+                
                     cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 
                     Mathf.Lerp(startingIntensity, 0f, 1-(shakeTimer / shakeTimerTotal));
                 }
