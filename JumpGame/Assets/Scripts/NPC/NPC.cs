@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class NPC : MonoBehaviour
 {
     public DialogueTrigger dialogueTrigger;
     public DialogueManager dialogueManager;
+
+
+    public TextMeshProUGUI interactText;
+
 
     int countSeen = 0;
   
@@ -30,7 +35,7 @@ public class NPC : MonoBehaviour
         {
 
 
-           
+            interactText.text = "Press E to interact";
 
             countSeen += 1;
 
@@ -62,6 +67,7 @@ public class NPC : MonoBehaviour
         {
             
             dialogueManager.EndDialogue();
+            interactText.text = "";
         }
     }
 

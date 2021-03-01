@@ -43,6 +43,8 @@ public class Player : MonoBehaviour
 
     public int jumpCounter;
 
+    
+
 
 
    
@@ -52,6 +54,8 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         footEmission = footsteps.emission;
+
+      
     }
 
 
@@ -59,8 +63,8 @@ public class Player : MonoBehaviour
     {
 
       
-
-        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+        //TODO sas
+        //transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
 
         jumpCounter = PlayerPrefs.GetInt("Jumps");
 
@@ -80,12 +84,13 @@ public class Player : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal");
 
-     
-    
+
+      
         //If on ground move horizontaly
-        if(jumpForce == 0.0f && isGrounded)
+        if (jumpForce == 0.0f && isGrounded)
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+            
           
         }
       
@@ -212,9 +217,9 @@ public class Player : MonoBehaviour
             var speed = lastVelocity.magnitude;
             var s = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
-            if(speed > 16f)
+            if(speed >= 10f)
             {
-                speed = 16f;
+                speed = 10f;
             }
             rb.velocity = s * Mathf.Max(speed, 0f);
 

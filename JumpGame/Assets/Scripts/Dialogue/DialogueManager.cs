@@ -57,8 +57,8 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        npcText.text = "Bye";
-       
+
+        StartCoroutine(End());
     }
 
 
@@ -68,6 +68,14 @@ public class DialogueManager : MonoBehaviour
         npcText.text = "Oh you are back again";
     }
 
+
+
+    IEnumerator End()
+    {
+        npcText.text = "Bye";
+        yield return new WaitForSeconds(3);
+        npcText.text = "";
+    }
    
 
 }
