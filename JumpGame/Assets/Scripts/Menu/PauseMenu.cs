@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
+    public Animator transition;
+
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
@@ -43,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(LoadLevel("MainMenu"));
         GameIsPaused = false;
     } 
 
@@ -51,4 +53,15 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+    IEnumerator LoadLevel(string name)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(name);
+    }
+
 }
