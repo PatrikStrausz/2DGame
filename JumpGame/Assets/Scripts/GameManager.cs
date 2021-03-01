@@ -31,7 +31,7 @@ public  class GameManager : MonoBehaviour
       
         JumpsCounter.jumpValue = jumpCounter;
 
-        Debug.Log("Player position: " + position);
+
     }
 
     public void NewGame()
