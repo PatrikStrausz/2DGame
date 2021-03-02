@@ -100,7 +100,8 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ThemeSong
     clip: {fileID: 8300000, guid: 1097890f438b7184eb0696419c7189c0, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
+  mixer: {fileID: 24300002, guid: cdeda4ec76ab4994e96e43371360b2f8, type: 2}

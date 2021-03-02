@@ -11,6 +11,8 @@ public class SettingsMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown;
 
+    public AudioMixer mixer;
+
     private void Start()
     {
 
@@ -43,21 +45,15 @@ public class SettingsMenu : MonoBehaviour
     }
 
 
-    public AudioMixer mixer;
+   
 
     public void SetVolume(float volume)
     {
 
-     
         mixer.SetFloat("volume", volume);
     }
 
-   /* public void SetVolume(float volume)
-    {
-
-        FindObjectOfType<AudioManager>().SetVolume(volume);
-    }
-   */
+   
 
 
     public void SetQuality(int qualityIndex)
