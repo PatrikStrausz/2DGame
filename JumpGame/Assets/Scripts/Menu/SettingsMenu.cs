@@ -42,11 +42,22 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
     }
 
+
+    public AudioMixer mixer;
+
     public void SetVolume(float volume)
+    {
+
+     
+        mixer.SetFloat("volume", volume);
+    }
+
+   /* public void SetVolume(float volume)
     {
 
         FindObjectOfType<AudioManager>().SetVolume(volume);
     }
+   */
 
 
     public void SetQuality(int qualityIndex)
