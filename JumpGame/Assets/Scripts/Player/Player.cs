@@ -131,9 +131,14 @@ public class Player : MonoBehaviour
                 rb.velocity = new Vector2(moveInput * speed,jumpForce );
                 jumpForce = 0;
 
-                jumpCounter += 1;
-                JumpsCounter.jumpValue = jumpCounter;
+                if (Time.timeScale == 1f)
+                {
+                    jumpCounter += 1;
+                    JumpsCounter.jumpValue = jumpCounter;
 
+
+                    FindObjectOfType<AudioManager>().Play("PlayerJump");
+                }
                 
                 CreateJumpDust();
             }

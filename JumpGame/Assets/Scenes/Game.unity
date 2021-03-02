@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 57377938}
   - component: {fileID: 57377937}
   - component: {fileID: 57377936}
+  - component: {fileID: 57377940}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -234,6 +235,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4051888382856192910}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ButtonPressed
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &57377938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +283,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57377934}
   m_CullTransparentMesh: 0
+--- !u!114 &57377940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57377934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94c6482be13a2d49b9c828508f4c92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &82976623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -521,6 +545,7 @@ GameObject:
   - component: {fileID: 236968333}
   - component: {fileID: 236968332}
   - component: {fileID: 236968331}
+  - component: {fileID: 236968335}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -621,6 +646,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4051888382856192910}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ButtonPressed
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &236968333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +694,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236968329}
   m_CullTransparentMesh: 0
+--- !u!114 &236968335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236968329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94c6482be13a2d49b9c828508f4c92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &297660145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1870,7 @@ GameObject:
   - component: {fileID: 755993102}
   - component: {fileID: 755993101}
   - component: {fileID: 755993100}
+  - component: {fileID: 755993104}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1922,6 +1971,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4051888382856192910}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ButtonPressed
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &755993102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,6 +2019,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755993098}
   m_CullTransparentMesh: 0
+--- !u!114 &755993104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755993098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94c6482be13a2d49b9c828508f4c92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &758033558
 GameObject:
   m_ObjectHideFlags: 0
@@ -9744,6 +9816,7 @@ GameObject:
   - component: {fileID: 1206564970}
   - component: {fileID: 1206564969}
   - component: {fileID: 1206564968}
+  - component: {fileID: 1206564972}
   m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
@@ -9844,6 +9917,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4051888382856192910}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ButtonPressed
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 297660150}
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -9892,6 +9976,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206564966}
   m_CullTransparentMesh: 0
+--- !u!114 &1206564972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206564966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94c6482be13a2d49b9c828508f4c92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1300556845
 GameObject:
   m_ObjectHideFlags: 0
@@ -36179,6 +36275,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117120744}
   m_CullTransparentMesh: 0
+--- !u!1001 &4051888382856192909
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4051888383701595340, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051888383701595343, guid: 7554a658467a0e6438a5b066bc6871bf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7554a658467a0e6438a5b066bc6871bf, type: 3}
+--- !u!114 &4051888382856192910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4051888383701595342, guid: 7554a658467a0e6438a5b066bc6871bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 4051888382856192909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223c735e8aba3f14bb3b447f6113a7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5425440918860152087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36186,6 +36363,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5246442919291654134, guid: 273c5cb7a6313b24ca6b2df4b636ab23,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246442919291654134, guid: 273c5cb7a6313b24ca6b2df4b636ab23,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ef4e912085972048adedf4ed10ca9a6, type: 3}
+    - target: {fileID: 5246442919291654134, guid: 273c5cb7a6313b24ca6b2df4b636ab23,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246442919291654134, guid: 273c5cb7a6313b24ca6b2df4b636ab23,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5425440917881813696, guid: 273c5cb7a6313b24ca6b2df4b636ab23,
         type: 3}
       propertyPath: m_RootOrder
@@ -36316,6 +36513,5 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4079659386216701149, guid: 273c5cb7a6313b24ca6b2df4b636ab23, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 273c5cb7a6313b24ca6b2df4b636ab23, type: 3}
