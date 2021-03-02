@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
         }
       
         //While holding space jump force increases
-        if(Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0) && isGrounded && canJump)
+        if(Input.GetKey(KeyCode.Space) && isGrounded && canJump)
         {
             if (isGrounded)
             {
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour
         }
 
         //On space released jump
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) && isGrounded && canJump)
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded && canJump)
         {
            
             rb.velocity = new Vector2(0, rb.velocity.y);
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
        
 
         //Jump
-        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             if (isGrounded )
             {
@@ -182,7 +182,7 @@ public class Player : MonoBehaviour
           
             if(CameraShake.Instance != null)
             {
-                CameraShake.Instance.ShakeCamera(1f, 0.05f);
+                CameraShake.Instance.ShakeCamera(3f, 0.1f);
             }
           
 
@@ -233,7 +233,7 @@ public class Player : MonoBehaviour
             fallDust.Play();
             if (CameraShake.Instance != null)
             {
-                CameraShake.Instance.ShakeCamera(2f, 0.05f);
+                CameraShake.Instance.ShakeCamera(4f, 0.1f);
             }
 
             PlayHitSound();

@@ -48,7 +48,8 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         StartCoroutine(LoadLevel("MainMenu"));
-        GameIsPaused = false;
+        
+
     } 
 
     public void QuitGame()
@@ -60,10 +61,9 @@ public class PauseMenu : MonoBehaviour
     IEnumerator LoadLevel(string name)
     {
         transition.SetTrigger("Start");
-
         yield return new WaitForSeconds(1);
-
         SceneManager.LoadScene(name);
+       
     }
 
     

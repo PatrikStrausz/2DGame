@@ -51,7 +51,9 @@ public class DialogueManager : MonoBehaviour
         foreach(char letter in sentece.ToCharArray())
         {
             npcText.text += letter;
+           
             yield return null;
+            FindObjectOfType<AudioManager>().Play("NPC");
         }
     }
 
@@ -66,6 +68,7 @@ public class DialogueManager : MonoBehaviour
     {
 
         npcText.text = "Oh you are back again";
+        FindObjectOfType<AudioManager>().Play("NPC");
     }
 
 
@@ -73,8 +76,10 @@ public class DialogueManager : MonoBehaviour
     IEnumerator End()
     {
         npcText.text = "Bye";
+        FindObjectOfType<AudioManager>().Play("NPC");
         yield return new WaitForSeconds(3);
         npcText.text = "";
+       
     }
    
 
