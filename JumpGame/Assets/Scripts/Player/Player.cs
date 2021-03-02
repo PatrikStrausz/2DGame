@@ -188,6 +188,8 @@ public class Player : MonoBehaviour
 
             fallDust.Stop();
             fallDust.Play();
+
+            PlayHitSound();
         }
         wasOnGround = isGrounded;
 
@@ -233,10 +235,17 @@ public class Player : MonoBehaviour
             {
                 CameraShake.Instance.ShakeCamera(2f, 0.05f);
             }
+
+            PlayHitSound();
         }
     }
 
+    private void PlayHitSound()
+    {
+        int rand = Random.Range(1, 5);
 
+        FindObjectOfType<AudioManager>().Play("Hit" + rand);
+    }
 
     /*public void LoadPlayer()
     {
