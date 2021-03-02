@@ -27,8 +27,10 @@ public  class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt("Jumps",jumpCounter);
 
+
       
-      
+
+
         JumpsCounter.jumpValue = jumpCounter;
 
 
@@ -42,6 +44,7 @@ public  class GameManager : MonoBehaviour
        // PlayerPrefs.SetFloat("Y", -3.5f);
         //PlayerPrefs.SetFloat("Z", 0f);
         PlayerPrefs.SetInt("Jumps", 0);
+        PlayerPrefs.SetFloat("Time", 0);
        
         JumpsCounter.jumpValue = 0;
         

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,9 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+
+
+
 
     void Update()
     {
@@ -37,8 +41,13 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+
+    private TimeSpan timePlaying;
     void Pause()
     {
+
+       
+
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -46,6 +55,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        TimerController.instance.EndTimer();
         Time.timeScale = 1f;
         StartCoroutine(LoadLevel("MainMenu"));
         

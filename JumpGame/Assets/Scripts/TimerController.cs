@@ -26,13 +26,16 @@ public class TimerController : MonoBehaviour
         timeCounter.text = "Time: 00:00:00";
         timerGoing = false;
 
+        
+     
+
         BeginTimer();
     }
 
     public void BeginTimer()
     {
         timerGoing = true;
-        elapsedTime = 0f;
+        elapsedTime = PlayerPrefs.GetFloat("Time");
 
         StartCoroutine(UpdateTimer());
     }
@@ -50,6 +53,8 @@ public class TimerController : MonoBehaviour
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss':'ff");
             timeCounter.text = timePlayingStr;
+
+            PlayerPrefs.SetFloat("Time", elapsedTime);
 
             yield return null;
         }
