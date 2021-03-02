@@ -44,4 +44,16 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Play();
     }
+
+    public void SetVolume(float volume)
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+
+            s.source.volume = volume;
+           
+        }
+    }
 }
