@@ -2,13 +2,29 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
+using System.IO;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
 
     public Animator transition;
-  
+
+    public Button loadButton;
+
+    private void Start()
+    {
+        string path = Application.persistentDataPath + "/player.bin";
+
+        if (File.Exists(path)){
+            loadButton.enabled = true;
+        }
+        else
+        {
+            loadButton.enabled = false;
+        }
+    }
+
     public void PlayGame()
     {
         FindObjectOfType<AudioManager>().Play("ButtonPressed");

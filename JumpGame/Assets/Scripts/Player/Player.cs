@@ -63,16 +63,20 @@ public class Player : MonoBehaviour
     {
 
       
-<<<<<<< Updated upstream
-        //TODO sas
-=======
+
        
->>>>>>> Stashed changes
+        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+
+        //TODO sas
+
+       
+
         //transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+
 
         jumpCounter = PlayerPrefs.GetInt("Jumps");
 
-
+       
 
        
     }
@@ -251,22 +255,7 @@ public class Player : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Hit" + rand);
     }
 
-    /*public void LoadPlayer()
-    {
-
-        PlayerData data = SaveSystem.LoadPlayer();
-
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        transform.position = position;
-
-
-        Debug.Log("Player position: " + position);
-    }
-    */
-   
+ 
 
 
     public void SavePlayer()

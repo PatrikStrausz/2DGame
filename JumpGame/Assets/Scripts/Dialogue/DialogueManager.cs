@@ -8,6 +8,9 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI npcText;
 
+    public TextMeshProUGUI goalName;
+    public TextMeshProUGUI goalText;
+
     private Queue<string> sentences;
 
     void Start()
@@ -38,8 +41,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        
         string sentece =  sentences.Dequeue();
-        Debug.Log(sentece);
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentece));
       
@@ -48,13 +51,17 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence(string sentece)
     {
         npcText.text = "";
+        goalText.text = "";
+        goalName.text = "Pinky";
         foreach(char letter in sentece.ToCharArray())
         {
             npcText.text += letter;
-           
+            goalText.text += letter;
             yield return null;
             FindObjectOfType<AudioManager>().Play("NPC");
         }
+
+       
     }
 
     public void EndDialogue()
