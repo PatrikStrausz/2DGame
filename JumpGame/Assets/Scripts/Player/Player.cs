@@ -64,6 +64,7 @@ public class Player : MonoBehaviour
 
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
        
         transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
@@ -77,6 +78,10 @@ public class Player : MonoBehaviour
 >>>>>>> parent of e4e1442 (Biome 2 almost done)
         //transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
 
+=======
+       
+        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+>>>>>>> parent of 4baf3e6 (Merge branch 'main' into Demo)
 
         jumpCounter = PlayerPrefs.GetInt("Jumps");
 

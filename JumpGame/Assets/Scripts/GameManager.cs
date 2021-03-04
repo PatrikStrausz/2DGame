@@ -40,11 +40,15 @@ public  class GameManager : MonoBehaviour
     {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 4baf3e6 (Merge branch 'main' into Demo)
        
         PlayerPrefs.SetFloat("X", -2.4f);
        PlayerPrefs.SetFloat("Y", -3.5f);
         PlayerPrefs.SetFloat("Z", 0f);
+<<<<<<< HEAD
 
 
         //TODO sss
@@ -62,6 +66,8 @@ public  class GameManager : MonoBehaviour
 >>>>>>> parent of e4e1442 (Biome 2 almost done)
         //PlayerPrefs.SetFloat("Z", 0f);
 
+=======
+>>>>>>> parent of 4baf3e6 (Merge branch 'main' into Demo)
         PlayerPrefs.SetInt("Jumps", 0);
         PlayerPrefs.SetFloat("Time", 0);
        
