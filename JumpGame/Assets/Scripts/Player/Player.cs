@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
     {
 
       
+<<<<<<< HEAD
 
        
         transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
@@ -71,6 +72,9 @@ public class Player : MonoBehaviour
 
        
 
+=======
+        //TODO sas
+>>>>>>> parent of e4e1442 (Biome 2 almost done)
         //transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
 
 

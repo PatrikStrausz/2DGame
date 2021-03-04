@@ -39,6 +39,7 @@ public  class GameManager : MonoBehaviour
     public void NewGame()
     {
 
+<<<<<<< HEAD
 
        
         PlayerPrefs.SetFloat("X", -2.4f);
@@ -54,6 +55,11 @@ public  class GameManager : MonoBehaviour
        // PlayerPrefs.SetFloat("X", -2.4f);
        //PlayerPrefs.SetFloat("Y", -3.5f);
 
+=======
+        //TODO sss
+        //PlayerPrefs.SetFloat("X", -2.4f);
+       // PlayerPrefs.SetFloat("Y", -3.5f);
+>>>>>>> parent of e4e1442 (Biome 2 almost done)
         //PlayerPrefs.SetFloat("Z", 0f);
 
         PlayerPrefs.SetInt("Jumps", 0);
