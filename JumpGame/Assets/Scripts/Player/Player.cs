@@ -63,8 +63,17 @@ public class Player : MonoBehaviour
     {
 
       
+<<<<<<< HEAD
        
         transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+=======
+<<<<<<< Updated upstream
+        //TODO sas
+=======
+       
+>>>>>>> Stashed changes
+        //transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+>>>>>>> e4e1442450e310337a0f90afd36192013b9df2bf
 
         jumpCounter = PlayerPrefs.GetInt("Jumps");
 

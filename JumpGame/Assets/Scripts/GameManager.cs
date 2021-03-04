@@ -39,10 +39,23 @@ public  class GameManager : MonoBehaviour
     public void NewGame()
     {
 
+<<<<<<< HEAD
        
         PlayerPrefs.SetFloat("X", -2.4f);
        PlayerPrefs.SetFloat("Y", -3.5f);
         PlayerPrefs.SetFloat("Z", 0f);
+=======
+<<<<<<< Updated upstream
+        //TODO sss
+        //PlayerPrefs.SetFloat("X", -2.4f);
+       // PlayerPrefs.SetFloat("Y", -3.5f);
+=======
+       
+       // PlayerPrefs.SetFloat("X", -2.4f);
+       //PlayerPrefs.SetFloat("Y", -3.5f);
+>>>>>>> Stashed changes
+        //PlayerPrefs.SetFloat("Z", 0f);
+>>>>>>> e4e1442450e310337a0f90afd36192013b9df2bf
         PlayerPrefs.SetInt("Jumps", 0);
         PlayerPrefs.SetFloat("Time", 0);
        
