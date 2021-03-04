@@ -63,13 +63,30 @@ public class Player : MonoBehaviour
     {
 
       
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
        
+        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+
+        //TODO sas
+
        
+
+=======
+        //TODO sas
+>>>>>>> parent of e4e1442 (Biome 2 almost done)
         //transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
 
-
+=======
+       
+        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+>>>>>>> parent of 4baf3e6 (Merge branch 'main' into Demo)
+=======
+       
+        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+>>>>>>> parent of 4baf3e6 (Merge branch 'main' into Demo)
 
         jumpCounter = PlayerPrefs.GetInt("Jumps");
 
@@ -187,7 +204,7 @@ public class Player : MonoBehaviour
           
             if(CameraShake.Instance != null)
             {
-                CameraShake.Instance.ShakeCamera(0.1f, 0.1f);
+                CameraShake.Instance.ShakeCamera(3f, 0.1f);
             }
           
 
@@ -238,7 +255,7 @@ public class Player : MonoBehaviour
             fallDust.Play();
             if (CameraShake.Instance != null)
             {
-                CameraShake.Instance.ShakeCamera(0.5f, 0.1f);
+                CameraShake.Instance.ShakeCamera(4f, 0.1f);
             }
 
             PlayHitSound();
