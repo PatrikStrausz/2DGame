@@ -43,11 +43,13 @@ public class Player : MonoBehaviour
 
     public int jumpCounter;
 
-    
+
+
+    public Animator anim;
+    public bool impact = false;
 
 
 
-   
 
 
     private void Awake()
@@ -55,27 +57,20 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         footEmission = footsteps.emission;
 
-      
+        anim = GetComponent<Animator>();
     }
 
 
     void Start()
     {
 
-      
-
-
-       
-       
+ 
         //transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
-
 
 
         jumpCounter = PlayerPrefs.GetInt("Jumps");
 
-       
-
-       
+    
     }
     
     
@@ -95,6 +90,10 @@ public class Player : MonoBehaviour
         if (jumpForce == 0.0f && isGrounded)
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+          
+                anim.SetFloat("Speed", Mathf.Abs(moveInput));
+
             
           
         }
@@ -144,6 +143,8 @@ public class Player : MonoBehaviour
 
                     FindObjectOfType<AudioManager>().Play("PlayerJump");
                 }
+
+                anim.SetTrigger("Jump");
                 
                 CreateJumpDust();
             }
@@ -159,12 +160,12 @@ public class Player : MonoBehaviour
 
        //Flipping sprite
 
-        if (Input.GetAxis("Horizontal") < 0 && !facingRight)
+        if (Input.GetAxis("Horizontal") < 0 && facingRight)
         {
            
             Flip();
         }
-        else if (Input.GetAxis("Horizontal") > 0 && facingRight)
+        else if (Input.GetAxis("Horizontal") > 0 && !facingRight)
         {
             Flip();
         }
@@ -180,7 +181,6 @@ public class Player : MonoBehaviour
             footEmission.rateOverTime = 0;
         }
 
-
         //show impact effect
         if(!wasOnGround && isGrounded)
         {
@@ -194,8 +194,12 @@ public class Player : MonoBehaviour
             fallDust.Stop();
             fallDust.Play();
 
+            impact = true;
+           
+            anim.SetTrigger("Fall");
             PlayHitSound();
         }
+      
         wasOnGround = isGrounded;
 
         lastVelocity = rb.velocity;
@@ -217,6 +221,7 @@ public class Player : MonoBehaviour
         theScale.x *= -1;
         direction.x *= -1;
         transform.localScale = theScale;
+     
     }
 
 
