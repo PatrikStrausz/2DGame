@@ -27,12 +27,18 @@ public  class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt("Jumps",jumpCounter);
 
+        PlayerPrefs.SetFloat("Time", PlayerPrefs.GetFloat("SavedTime"));
+     
+
 
       
 
 
         JumpsCounter.jumpValue = jumpCounter;
 
+
+        Debug.Log("Load " + PlayerPrefs.GetFloat("Time"));
+        Debug.Log("Load " + PlayerPrefs.GetFloat("SavedTime"));
 
     }
 
@@ -41,19 +47,23 @@ public  class GameManager : MonoBehaviour
 
 
 
-        //TODO sss
-        //PlayerPrefs.SetFloat("X", -2.4f);
-       // PlayerPrefs.SetFloat("Y", -3.5f);
-        //PlayerPrefs.SetFloat("Z", 0f);
+        
+        PlayerPrefs.SetFloat("X", -2.4f);
+        PlayerPrefs.SetFloat("Y", -3.5f);
+        PlayerPrefs.SetFloat("Z", 0f);
 
 
         PlayerPrefs.SetInt("Jumps", 0);
         PlayerPrefs.SetFloat("Time", 0);
        
         JumpsCounter.jumpValue = 0;
-        
+
+
+        Debug.Log("New " + PlayerPrefs.GetFloat("Time"));
+        Debug.Log("New "+PlayerPrefs.GetFloat("SavedTime"));
     }
 
+   
    
 
   

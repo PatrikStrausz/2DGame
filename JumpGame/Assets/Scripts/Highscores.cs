@@ -11,7 +11,7 @@ public class Highscores : MonoBehaviour
     const string publicCode = "6046540f8f40bbbd0cc3a147";
     const string webURL = "http://dreamlo.com/lb/";
 
-    static Highscores instance;
+   public static Highscores instance;
 
 
 
@@ -25,7 +25,6 @@ public class Highscores : MonoBehaviour
     {
         instance = this;
         displayHighScore = GetComponent<DisplayHighScore>();
-        AddNewHighScore("Dano");
         Download();
     }
 

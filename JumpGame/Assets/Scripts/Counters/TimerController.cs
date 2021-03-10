@@ -15,6 +15,8 @@ public class TimerController : MonoBehaviour
 
     public float elapsedTime;
 
+    
+
     private void Awake()
     {
         instance = this;
@@ -54,7 +56,6 @@ public class TimerController : MonoBehaviour
             string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss':'ff");
             timeCounter.text = timePlayingStr;
 
-            PlayerPrefs.SetFloat("Time", elapsedTime);
 
             yield return null;
         }

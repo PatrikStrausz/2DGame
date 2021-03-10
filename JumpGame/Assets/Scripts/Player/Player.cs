@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
     {
 
  
-        //transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
 
 
         jumpCounter = PlayerPrefs.GetInt("Jumps");
@@ -263,6 +263,9 @@ public class Player : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
+        PlayerPrefs.SetFloat("Time", TimerController.instance.elapsedTime);
+        PlayerPrefs.SetFloat("SavedTime", TimerController.instance.elapsedTime);
+
     }
 
     private void OnDrawGizmosSelected()
