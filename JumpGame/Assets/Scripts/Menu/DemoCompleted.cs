@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
+
 public class DemoCompleted : MonoBehaviour
 {
 
@@ -16,7 +18,10 @@ public class DemoCompleted : MonoBehaviour
 
     public  TMP_InputField inputField;
 
-    private  string name;
+    private new string name;
+
+   
+
 
 
 
@@ -29,13 +34,15 @@ public class DemoCompleted : MonoBehaviour
 
     void Start()
     {
-
       
+
+
         Time.timeScale = 0f;
         demoJumpText.text = jumpText.text;
         demoTimeText.text = timeText.text;
 
-       
+     
+
 
     }
 
@@ -58,7 +65,9 @@ public class DemoCompleted : MonoBehaviour
 
     public  void AddStats()
     {
-        Highscores.instance.name = name;
+       
+      
+        Highscores.instance.AddNewHighScore(name);
     }
 
 }

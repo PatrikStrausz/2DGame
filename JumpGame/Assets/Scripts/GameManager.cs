@@ -59,8 +59,7 @@ public  class GameManager : MonoBehaviour
         JumpsCounter.jumpValue = 0;
 
 
-        Debug.Log("New " + PlayerPrefs.GetFloat("Time"));
-        Debug.Log("New "+PlayerPrefs.GetFloat("SavedTime"));
+     
     }
 
    

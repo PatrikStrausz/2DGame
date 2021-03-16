@@ -31,6 +31,6 @@ public class Goal : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         dialogueCanvas.SetActive(false);
-        TimerController.instance.BeginTimer();
+       
     }
 }

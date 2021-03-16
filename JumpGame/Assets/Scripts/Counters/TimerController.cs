@@ -52,11 +52,13 @@ public class TimerController : MonoBehaviour
         while (timerGoing)
         {
             elapsedTime += Time.deltaTime;
+            
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss':'ff");
             timeCounter.text = timePlayingStr;
 
 
+            PlayerPrefs.SetFloat("Time", elapsedTime);
             yield return null;
         }
     }

@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
     {
 
  
-        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+       transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
 
 
         jumpCounter = PlayerPrefs.GetInt("Jumps");
@@ -76,10 +76,11 @@ public class Player : MonoBehaviour
     
     void Update()
     {
+
+
         
-       
-   
-        
+
+
         isGrounded = Physics2D.OverlapCircle(onGround.transform.position,checkRadius, groundMask);
 
         moveInput = Input.GetAxisRaw("Horizontal");
